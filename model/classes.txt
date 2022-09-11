@@ -1,0 +1,9 @@
+Three_Wheeler
+bus
+car
+lcv
+Two_Wheeler
+multiaxle
+tractor
+truck
+tractor_with_trailor
