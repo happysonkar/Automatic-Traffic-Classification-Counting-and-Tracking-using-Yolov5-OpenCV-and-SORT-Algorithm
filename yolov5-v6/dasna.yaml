@@ -1,0 +1,5 @@
+train: C:\Users\Administrator\Desktop\yolo\yolov5-v6\data\images\images\train
+val: C:\Users\Administrator\Desktop\yolo\yolov5-v6\data\images\images\val
+
+nc: 15
+names: ['car','lcv','tractor','tyre','bus','auto','truck','person','animal','bike','emv','double_tyre','minibus','tank','trolly']
