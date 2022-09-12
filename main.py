@@ -171,38 +171,6 @@ if __name__ == "__main__":
             
             # for del_id in del_his:
             #     del history[del_id]
-
-            # counter_results = []
-            # for id in history.keys():
-            #         if id not in removed_id_list:
-            #             #print("id",id)#extract id after tracking
-            #             history[id]["no_update_count"] += 1
-            #             #print("history_of",history[id])
-
-            #             if history[id]["no_update_count"] > 0:#:4:
-
-            #                 his = history[id]["his"]
-            #                 result = {}
-            #                 #print('last two det',his[-2:])
-            #                 for i in set(his):
-            #                     result[i] = his.count(i)
-            #                 res = sorted(result.items(), key=lambda d: d[1], reverse=True)
-            #                 objectName = res[0][0]
-            #                 if res[0][1] < 10 or (objectName =='Two_Wheeler' and res[0][1] < 15):
-            #                     continue
-            #                 print("Happy")
-            #                 print('\n\n')
-
-            #                 print('id:', id, objectName, res)
-            #                 # update_counter_results(objectName, espeed)
-            #                 # counter_results.append([ id, objectName])
-
-            #                 #del id
-            #                 removed_id_list.append(id)
-            # for id in removed_id_list:
-            #         if id in mot_tracker.rec_del_trids:
-            #             _= history.pop(id)
-            #             removed_id_list.remove(id)
             
             out.write(org_frame)
             cv2.imshow("Out",org_frame)
