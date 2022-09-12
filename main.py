@@ -106,8 +106,6 @@ if __name__ == "__main__":
     history = {}
     removed_id_list = []
 
-    fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-    out = cv2.VideoWriter('output.mp4', fourcc, 3.0, (1280,720))
     while True:
         try:
             frame = cam.read()
@@ -171,8 +169,7 @@ if __name__ == "__main__":
             
             # for del_id in del_his:
             #     del history[del_id]
-            
-            out.write(org_frame)
+
             cv2.imshow("Out",org_frame)
             if cv2.waitKey(1) & 0XFF==ord('q'):
                 break
@@ -181,6 +178,5 @@ if __name__ == "__main__":
             
         except Exception as e:
             print("Error",e)
-    out.release()
     cam.frame_release()
     cv2.destroyAllWindows()
