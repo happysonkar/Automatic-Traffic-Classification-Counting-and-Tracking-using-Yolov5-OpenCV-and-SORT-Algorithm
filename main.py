@@ -98,7 +98,7 @@ def get_objName(item,objects):
     return objects[max_index][0]
 
 if __name__ == "__main__":
-    # cam = CameraStream("video2.avi")
+    
     cam = CameraStream("highway2.mp4")
     yolo_dir_path = r'yolov5-v6'
     model_path  = r'model\weights/best.pt'
@@ -115,7 +115,7 @@ if __name__ == "__main__":
             objects = filter(lambda x: x[0], objects)
             objects = list(filter(lambda x: x[2] > 0,objects))
 
-            # objects = filter_out_repeat(objects)
+            objects = filter_out_repeat(objects)
             detections = []
             for item in objects:
                 detections.append([int(item[3][0] - item[3][2] / 2),
@@ -153,7 +153,6 @@ if __name__ == "__main__":
                     for i in set(his):
                         result[i] = his.count(i)
                     res = sorted(result.items(), key=lambda d: d[1], reverse=True)
-                    #print(res)
                     objectName = res[0][0]
 
                     cv2.rectangle(org_frame, (x1, y1), (x2, y2), (0,255,0), thickness=2)
@@ -169,7 +168,7 @@ if __name__ == "__main__":
             
             # for del_id in del_his:
             #     del history[del_id]
-
+            
             cv2.imshow("Out",org_frame)
             if cv2.waitKey(1) & 0XFF==ord('q'):
                 break
